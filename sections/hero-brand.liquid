@@ -20,29 +20,13 @@
       <div class="hero-brand__blob hero-brand__blob--3"></div>
     </div>
 
-    <!-- Logo grid -->
-    <div class="hero-brand__logos-grid">
-      {% for i in (1..3) %}
-        <div class="hero-brand__logo-item">
-          <img 
-            src="{{ 'logo-lg-0' | append: i | append: '.jpg' | asset_url }}" 
-            alt="HomeBy Logo"
-            class="hero-brand__logo"
-          >
-        </div>
-      {% endfor %}
-    </div>
-
     <!-- Content -->
     <div class="hero-brand__content">
-      <h1 class="hero-brand__title">{{ section.settings.title | default: 'HomeBy' }}</h1>
-      <p class="hero-brand__subtitle">{{ section.settings.subtitle }}</p>
-      
-      {% if section.settings.cta_text != blank %}
-        <a href="{{ section.settings.cta_link }}" class="button button--primary">
-          {{ section.settings.cta_text }}
-        </a>
-      {% endif %}
+      <img 
+        src="{{ 'logo-lg-02-removebg.png' | asset_url }}" 
+        alt="HomeBy"
+        class="hero-brand__logo-main"
+      >
     </div>
 
     <!-- Bottom logo accent -->
@@ -63,7 +47,7 @@
     padding-block: var(--padding-block);
     position: relative;
     overflow: hidden;
-    min-height: 500px;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,7 +63,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 40px;
     z-index: 1;
   }
 
@@ -141,67 +124,30 @@
     }
   }
 
-  .hero-brand__logos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 30px;
-    max-width: 400px;
-    width: 100%;
-    animation: fade-in 0.8s ease-out;
-  }
-
-  .hero-brand__logo-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-  }
-
-  .hero-brand__logo-item:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.2);
-    transform: translateY(-5px);
-  }
-
-  .hero-brand__logo {
-    max-width: 100%;
-    height: auto;
-    max-height: 80px;
-  }
-
   .hero-brand__content {
     text-align: center;
     animation: fade-in 0.8s ease-out 0.2s both;
     max-width: 600px;
+    padding: 20px;
+    z-index: 2;
   }
 
-  .hero-brand__title {
-    font-size: clamp(2.5rem, 10vw, 4rem);
-    font-weight: 700;
-    margin: 0 0 20px;
-    letter-spacing: -0.02em;
-    background: linear-gradient(135deg, var(--text-color) 0%, var(--text-color) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .hero-brand__subtitle {
-    font-size: clamp(1rem, 4vw, 1.25rem);
-    line-height: 1.6;
-    color: var(--text-color);
-    opacity: 0.85;
-    margin: 0 0 30px;
+  .hero-brand__logo-main {
+    max-width: clamp(200px, 40vw, 420px);
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    object-fit: contain;
   }
 
   .hero-brand__accent-logo {
-    max-width: 200px;
-    opacity: 0.1;
+    position: absolute;
+    bottom: -80px;
+    right: -100px;
+    max-width: 400px;
+    opacity: 0.03;
     animation: fade-in 0.8s ease-out 0.4s both;
+    pointer-events: none;
   }
 
   .hero-brand__accent-image {
@@ -223,12 +169,17 @@
   /* Responsive */
   @media screen and (max-width: 768px) {
     .hero-brand {
-      min-height: 400px;
+      height: 50vh;
       padding-block: 40px;
     }
 
     .hero-brand__container {
-      gap: 30px;
+      gap: 20px;
+      padding: 0 15px;
+    }
+
+    .hero-brand__logo-main {
+      max-width: clamp(160px, 50vw, 280px);
     }
 
     .hero-brand__logos-grid {
