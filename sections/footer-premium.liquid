@@ -14,13 +14,13 @@
   <div class="footer-premium__wrapper">
     <!-- Logo Section -->
     <div class="footer-premium__section footer-premium__section--logos">
-      <h3 class="footer-premium__title">HomeBy Collection</h3>
+      <h3 class="footer-premium__title">BrozBuy Collection</h3>
       <div class="footer-premium__logos">
         {% for i in (1..5) %}
           <div class="footer-premium__logo-item">
             <img 
               src="{{ 'logo-sm-0' | append: i | append: '.jpg' | asset_url }}" 
-              alt="HomeBy"
+              alt="BrozBuy"
               class="footer-premium__logo"
             >
           </div>
@@ -30,7 +30,7 @@
 
     <!-- Brand Info -->
     <div class="footer-premium__section footer-premium__section--info">
-      <h3 class="footer-premium__title">About HomeBy</h3>
+      <h3 class="footer-premium__title">About BrozBuy</h3>
       <p class="footer-premium__description">{{ section.settings.brand_description }}</p>
       <div class="footer-premium__social">
         {% if section.settings.facebook != blank %}
@@ -81,12 +81,12 @@
   <!-- Copyright -->
   <div class="footer-premium__bottom">
     <div class="footer-premium__copyright">
-      <p>&copy; 2024 HomeBy. All rights reserved.</p>
+      <p>&copy; 2024 BrozBuy. All rights reserved.</p>
     </div>
     <div class="footer-premium__accent-logo">
       <img 
         src="{{ 'logo-md-01.jpg' | asset_url }}" 
-        alt="HomeBy"
+        alt="BrozBuy"
         class="footer-premium__accent"
       >
     </div>
@@ -329,7 +329,7 @@
       "type": "textarea",
       "id": "brand_description",
       "label": "Brand Description",
-      "default": "HomeBy brings you premium home essentials curated for modern living. Quality, style, and comfort in every product."
+      "default": "BrozBuy brings you premium home essentials curated for modern living. Quality, style, and comfort in every product."
     },
     {
       "type": "url",

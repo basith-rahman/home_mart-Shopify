@@ -24,17 +24,8 @@
     <div class="hero-brand__content">
       <img 
         src="{{ 'logo-lg-02-removebg.png' | asset_url }}" 
-        alt="HomeBy"
+        alt="BrozBuy"
         class="hero-brand__logo-main"
-      >
-    </div>
-
-    <!-- Bottom logo accent -->
-    <div class="hero-brand__accent-logo">
-      <img 
-        src="{{ 'logo-xl.jpg' | asset_url }}" 
-        alt="HomeBy"
-        class="hero-brand__accent-image"
       >
     </div>
   </div>
@@ -47,16 +38,19 @@
     padding-block: var(--padding-block);
     position: relative;
     overflow: hidden;
-    height: 50vh;
+    height: auto;
+    min-height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    padding-top: 100px;
   }
 
   .hero-brand__container {
     position: relative;
     width: 100%;
-    max-width: 1200px;
+    max-width: none;
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
@@ -72,8 +66,9 @@
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.05;
+    opacity: 0.02;
     z-index: 0;
+    pointer-events: none;
   }
 
   .hero-brand__blob {
@@ -127,9 +122,13 @@
   .hero-brand__content {
     text-align: center;
     animation: fade-in 0.8s ease-out 0.2s both;
-    max-width: 600px;
+    max-width: 100%;
+    width: auto;
     padding: 20px;
     z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .hero-brand__logo-main {
@@ -138,21 +137,6 @@
     margin: 0 auto;
     display: block;
     object-fit: contain;
-  }
-
-  .hero-brand__accent-logo {
-    position: absolute;
-    bottom: -80px;
-    right: -100px;
-    max-width: 400px;
-    opacity: 0.03;
-    animation: fade-in 0.8s ease-out 0.4s both;
-    pointer-events: none;
-  }
-
-  .hero-brand__accent-image {
-    width: 100%;
-    height: auto;
   }
 
   @keyframes fade-in {
@@ -217,7 +201,7 @@
       "type": "text",
       "id": "title",
       "label": "Title",
-      "default": "HomeBy"
+      "default": "BrozBuy"
     },
     {
       "type": "textarea",

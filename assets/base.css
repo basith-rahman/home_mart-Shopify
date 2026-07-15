@@ -2447,6 +2447,7 @@ form.payment-terms {
 
 .card-gallery {
   position: relative;
+  overflow: hidden;
 }
 
 @container (max-width: 70px) {
@@ -4246,7 +4247,7 @@ main > .shopify-section:first-child .section:not(.disable-section-top-offset) {
   background: rgb(255 255 255 / 0.62);
   border: 1px solid rgb(47 49 51 / 0.12);
   box-shadow: 0 10px 26px rgb(47 49 51 / 0.08);
-  padding: 8px;
+  padding: 0;
 }
 
 product-card .buy-buttons-block,
@@ -4580,6 +4581,7 @@ product-card :is(.quantity-label, .quantity-selector-wrapper, .quantity-rules, .
 .section-carousel {
   border-radius: 18px;
   background: rgb(255 255 255 / 0.45);
+  padding-inline: 16px;
 }
 
 .section-resource-list__header {
