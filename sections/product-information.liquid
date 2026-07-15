@@ -4,6 +4,11 @@
   {{ closest.product | structured_data }}
 </script>
 
+<script
+  src="{{ 'pdp-cta-text.js' | asset_url }}"
+  type="module"
+></script>
+
 {% capture media_gallery %}
   {%- content_for 'block',
     type: '_product-media-gallery',
@@ -286,6 +291,10 @@
 
   /* Mobile adjustments */
   @media screen and (max-width: 749px) {
+    sticky-add-to-cart {
+      display: none;
+    }
+
     .sticky-add-to-cart__bar {
       bottom: 0;
       width: 100%;

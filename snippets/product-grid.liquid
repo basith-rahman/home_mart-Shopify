@@ -131,7 +131,7 @@
         role="list"
         data-last-page="{{ paginate.pages }}"
         data-product-card-size="{{ section.settings.product_card_size }}"
-        style="--mobile-columns: {% if section.settings.mobile_product_card_size == 'large' %}1{% else %}2{% endif %};"
+        style="--mobile-columns: 3;"
       >
         {% comment %}
           This script is used to set the grid view on the product grid stored in sessionStorage. Keeping it here helps us prevent seeing the default state.
@@ -177,7 +177,7 @@
 {% stylesheet %}
   .product-grid {
     --product-grid-gap: var(--product-grid-gap-mobile);
-    --mobile-columns: 2; /* Default value */
+    --mobile-columns: 3; /* Premium mobile-first default: 3 products per row */
 
     isolation: isolate;
 

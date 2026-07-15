@@ -108,6 +108,11 @@
         data-testid="product-information-media"
       >
         {{ media_gallery }}
+        {% if request.page_type == 'product' %}
+          <p class="product-information__media-caption">
+            Free fast delivery all over Kerala.
+          </p>
+        {% endif %}
       </div>
     {% endcapture %}
 
@@ -151,10 +156,29 @@
     height: 100%;
   }
 
+  .product-information__media-caption {
+    margin: 0;
+    margin-top: var(--margin-sm);
+    padding: var(--padding-xs) var(--padding-md);
+    border: 1px solid rgb(var(--color-foreground-rgb) / 0.14);
+    border-radius: 999px;
+    width: fit-content;
+    max-width: 100%;
+    font-size: var(--font-size--sm);
+    line-height: 1.4;
+    color: rgb(var(--color-foreground-rgb) / 0.88);
+    background: rgb(var(--color-background-rgb) / 0.86);
+  }
+
   /* Mobile styles */
   @media screen and (max-width: 749px) {
     .product-information__media {
       grid-column: 1 / -1;
+    }
+
+    .product-information__media-caption {
+      margin-top: var(--margin-xs);
+      font-size: var(--font-size--xs);
     }
 
     .product-details {

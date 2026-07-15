@@ -30,18 +30,18 @@
             "custom_width_mobile": 100,
             "height": "fit",
             "custom_height": 100,
-            "background_color": "",
             "background_media": "none",
+            "background_color": "",
             "video_position": "cover",
             "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
             "toggle_overlay": false,
             "overlay_color": "#00000026",
             "overlay_style": "solid",
             "gradient_direction": "to top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
             "link": "",
             "open_in_new_tab": false,
             "placeholder": "",
@@ -69,18 +69,18 @@
                 "custom_width_mobile": 100,
                 "height": "fit",
                 "custom_height": 100,
-                "background_color": "",
                 "background_media": "none",
+                "background_color": "",
                 "video_position": "cover",
                 "background_image_position": "cover",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
                 "toggle_overlay": false,
                 "overlay_color": "#00000026",
                 "overlay_style": "solid",
                 "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
                 "link": "",
                 "open_in_new_tab": false,
                 "placeholder": "",
@@ -94,11 +94,11 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h1>Illuminate with sculptural elegance</h1>",
+                    "text": "<h2>Premium home tools for everyday mastery</h2>",
                     "width": "100%",
                     "max_width": "narrow",
                     "alignment": "center",
-                    "type_preset": "h1",
+                    "type_preset": "h2",
                     "font": "var(--font-body--family)",
                     "font_size": "1rem",
                     "line_height": "normal",
@@ -109,8 +109,8 @@
                     "background": false,
                     "background_color": "#00000026",
                     "corner_radius": 0,
-                    "padding-block-start": 60,
-                    "padding-block-end": 60,
+                    "padding-block-start": 20,
+                    "padding-block-end": 20,
                     "padding-inline-start": 0,
                     "padding-inline-end": 0
                   },
@@ -150,7 +150,7 @@
         "vertical_alignment_flex_direction_column": "flex-end",
         "gap": 0,
         "section_width": "page-width",
-        "section_height": "medium",
+        "section_height": "small",
         "section_height_custom": 5,
         "background_color": "rgba(0,0,0,0)",
         "toggle_overlay": true,
@@ -159,27 +159,27 @@
         "gradient_direction": "to top",
         "blurred_reflection": false,
         "reflection_opacity": 75,
-        "padding-block-start": 24,
-        "padding-block-end": 100
+        "padding-block-start": 12,
+        "padding-block-end": 40
       }
     },
     "marquee_KN4PYb": {
-      "type": "marquee",
+      "type": "section",
       "blocks": {
-        "text_kFiJUi": {
+        "text_delivery_label": {
           "type": "text",
           "settings": {
-            "text": "<p>Transform your space with statement lighting that fuses artful form and radiant ambiance in every detail</p>",
+            "text": "<p>Free delivery all over Kerala</p>",
             "width": "fit-content",
             "max_width": "normal",
-            "alignment": "left",
+            "alignment": "center",
             "type_preset": "h6",
             "font": "var(--font-body--family)",
-            "font_size": "1rem",
+            "font_size": "0.95rem",
             "line_height": "tight",
-            "letter_spacing": "tight",
+            "letter_spacing": "normal",
             "case": "none",
-            "wrap": "nowrap",
+            "wrap": "pretty",
             "text_color": "",
             "background": false,
             "background_color": "#00000026",
@@ -191,20 +191,20 @@
           },
           "blocks": {}
         },
-        "text_separator": {
+        "text_delivery_note": {
           "type": "text",
           "settings": {
-            "text": "<p>/</p>",
+            "text": "<p>Fast dispatch. Secure packing. Trusted local service.</p>",
             "width": "fit-content",
             "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "h6",
+            "alignment": "center",
+            "type_preset": "paragraph",
             "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "tight",
-            "letter_spacing": "tight",
+            "font_size": "0.9rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
             "case": "none",
-            "wrap": "nowrap",
+            "wrap": "pretty",
             "text_color": "",
             "background": false,
             "background_color": "#00000026",
@@ -218,21 +218,40 @@
         }
       },
       "block_order": [
-        "text_kFiJUi",
-        "text_separator"
+        "text_delivery_label",
+        "text_delivery_note"
       ],
-      "name": "t:names.marquee_section",
+      "name": "Free delivery highlight",
       "settings": {
-        "movement_direction": "reverse",
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "center",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 6,
+        "section_width": "full-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
         "background_color": "{{ settings.color_palette.color2 }}",
-        "padding-block-start": 24,
-        "padding-block-end": 24,
-        "gap_between_elements": 24
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "padding-block-start": 12,
+        "padding-block-end": 12
       }
     },
     "product_list_themegen": {
       "type": "product-list",
-      "disabled": false,
       "blocks": {
         "static-header": {
           "type": "_product-list-content",
@@ -253,8 +272,8 @@
             "custom_width_mobile": 100,
             "height": "fit",
             "custom_height": 100,
-            "background_color": "",
             "background_media": "none",
+            "background_color": "",
             "video_position": "cover",
             "background_image_position": "cover",
             "border": "none",
@@ -349,18 +368,18 @@
                 "custom_width_mobile": 100,
                 "height": "fit",
                 "custom_height": 100,
-                "background_color": "",
                 "background_media": "none",
+                "background_color": "",
                 "video_position": "cover",
                 "background_image_position": "cover",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
                 "toggle_overlay": false,
                 "overlay_color": "#00000026",
                 "overlay_style": "solid",
                 "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
                 "link": "",
                 "open_in_new_tab": false,
                 "padding-block-start": 0,
@@ -438,11 +457,72 @@
                 "price_37riDf",
                 "swatches_87VJC8"
               ]
+            },
+            "buy_buttons_qfU3nN": {
+              "type": "buy-buttons",
+              "settings": {
+                "stacking": false,
+                "text_color": "",
+                "show_pickup_availability": false,
+                "gift_card_form": false,
+                "recipient_button_style": "default",
+                "recipient_button_background": "{{ settings.color_palette.background }}",
+                "recipient_button_text": "{{ settings.color_palette.foreground }}",
+                "recipient_button_border": "{{ settings.color_palette.foreground }}",
+                "selected_recipient_button_style": "default",
+                "selected_recipient_button_background": "{{ settings.color_palette.foreground }}",
+                "selected_recipient_button_text": "{{ settings.color_palette.background }}",
+                "selected_recipient_button_border": "{{ settings.color_palette.foreground }}",
+                "input_style": "default",
+                "input_background_color": "{{ settings.color_palette.background }}",
+                "input_text_color": "{{ settings.color_palette.foreground }}",
+                "input_border_color": "{{ settings.color_palette.foreground }}",
+                "border_width": 1,
+                "border_radius": 0,
+                "padding-block-start": 8,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "quantity": {
+                  "type": "quantity",
+                  "static": true,
+                  "settings": {
+                    "input_style": "default",
+                    "input_background_color": "{{ settings.color_palette.background }}",
+                    "input_text_color": "{{ settings.color_palette.foreground }}",
+                    "input_border_color": "{{ settings.color_palette.foreground }}",
+                    "border_width": 1,
+                    "border_radius": 0
+                  },
+                  "blocks": {}
+                },
+                "add-to-cart": {
+                  "type": "add-to-cart",
+                  "static": true,
+                  "settings": {
+                    "style_class": "button",
+                    "custom_button_background": "{{ settings.color_palette.foreground }}",
+                    "custom_button_text": "{{ settings.color_palette.background }}",
+                    "custom_button_border": "{{ settings.color_palette.background }}"
+                  },
+                  "blocks": {}
+                },
+                "accelerated-checkout": {
+                  "type": "accelerated-checkout",
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                }
+              },
+              "block_order": []
             }
           },
           "block_order": [
             "product_card_gallery_PhczVC",
-            "group_McqFAT"
+            "group_McqFAT",
+            "buy_buttons_qfU3nN"
           ]
         }
       },
@@ -453,7 +533,7 @@
         "carousel_on_mobile": false,
         "max_products": 4,
         "columns": 4,
-        "mobile_columns": "1",
+        "mobile_columns": "3",
         "mobile_card_size": "60cqw",
         "columns_gap": 0,
         "rows_gap": 36,
@@ -474,7 +554,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<h2>Our shop</h2>",
+            "text": "<h2>Premium Home Tools</h2>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -499,7 +579,7 @@
         "text_eFMntb": {
           "type": "text",
           "settings": {
-            "text": "<h2>We believe lighting should transcend function—each piece is a sculpted invitation to linger, contemplate, and be inspired by your surroundings</h2>",
+            "text": "<h2>Built for modern homes, our curated tools combine durability, precision, and refined design to elevate every daily task</h2>",
             "width": "100%",
             "max_width": "narrow",
             "alignment": "center",
@@ -554,18 +634,18 @@
         "section_width": "page-width",
         "section_height": "small",
         "section_height_custom": 50,
-        "background_color": "{{ settings.color_palette.color1 }}",
         "background_media": "none",
+        "background_color": "{{ settings.color_palette.color1 }}",
         "video_position": "cover",
         "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
         "toggle_overlay": false,
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
         "padding-block-start": 64,
         "padding-block-end": 64
       }
@@ -600,7 +680,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2>Artistry in light</h2>",
+                "text": "<h2>Workshop-grade precision</h2>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -625,7 +705,7 @@
             "text_HqcftD": {
               "type": "text",
               "settings": {
-                "text": "<p>Experience the interplay of hand-finished materials and innovative design, curated for the discerning eye</p>",
+                "text": "<p>From premium hand tools to smart storage, discover products engineered to perform beautifully in real homes</p>",
                 "width": "fit-content",
                 "max_width": "narrow",
                 "alignment": "left",
@@ -712,7 +792,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2>Crafted to captivate</h2>",
+                "text": "<h2>Made for daily mastery</h2>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -737,7 +817,7 @@
             "text_tKc49J": {
               "type": "text",
               "settings": {
-                "text": "<p>Our fixtures unite artisan glass, premium metals, and exquisite wood accents into luminous pieces that elevate any interior</p>",
+                "text": "<p>Upgrade your space with pro-quality essentials designed for long life, clean aesthetics, and dependable results</p>",
                 "width": "fit-content",
                 "max_width": "narrow",
                 "alignment": "left",

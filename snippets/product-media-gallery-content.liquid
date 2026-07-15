@@ -444,6 +444,16 @@
       controls: controls
     %}
 
+    {% if sorted_media.size > 1 %}
+      <div
+        class="pdp-media-scroll-indicator"
+        aria-hidden="true"
+      >
+        <span class="pdp-media-scroll-indicator__track"></span>
+        <span class="pdp-media-scroll-indicator__thumb"></span>
+      </div>
+    {% endif %}
+
     {% if media_presentation == 'grid' %}
       <ul
         class="media-gallery__grid list-unstyled"
@@ -779,6 +789,52 @@
 
   .dialog--preloading {
     opacity: 0;
+  }
+
+  .pdp-media-scroll-indicator {
+    display: none;
+  }
+
+  @media screen and (max-width: 749px) {
+    .pdp-media-scroll-indicator {
+      position: relative;
+      display: grid;
+      place-items: center;
+      margin-top: var(--margin-xs);
+      margin-bottom: var(--margin-sm);
+      min-height: 18px;
+    }
+
+    .pdp-media-scroll-indicator__track {
+      width: clamp(76px, 28vw, 124px);
+      height: 4px;
+      border-radius: 999px;
+      background: rgb(47 49 51 / 0.12);
+    }
+
+    .pdp-media-scroll-indicator__thumb {
+      position: absolute;
+      width: clamp(28px, 11vw, 40px);
+      height: 4px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--brand-brass), var(--brand-olive));
+      box-shadow: 0 2px 8px rgb(47 49 51 / 0.18);
+      animation: pdp-swipe-hint 1.5s ease-in-out infinite;
+      will-change: transform;
+    }
+  }
+
+  @keyframes pdp-swipe-hint {
+    0%,
+    100% {
+      transform: translateX(-18px);
+      opacity: 0.7;
+    }
+
+    50% {
+      transform: translateX(18px);
+      opacity: 1;
+    }
   }
 
   @media screen and (max-width: 749px) {
