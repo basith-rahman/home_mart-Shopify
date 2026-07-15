@@ -1,0 +1,363 @@
+{% liquid
+  assign text_color = section.settings.text_color | default: settings.page_text_color
+  assign background_color = section.settings.background_color | default: '#2f3133'
+%}
+
+<section 
+  class="footer-premium"
+  style="
+    --text-color: {{ text_color }};
+    --background-color: {{ background_color }};
+  "
+  {{ section.shopify_attributes }}
+>
+  <div class="footer-premium__wrapper">
+    <!-- Logo Section -->
+    <div class="footer-premium__section footer-premium__section--logos">
+      <h3 class="footer-premium__title">HomeBy Collection</h3>
+      <div class="footer-premium__logos">
+        {% for i in (1..5) %}
+          <div class="footer-premium__logo-item">
+            <img 
+              src="{{ 'logo-sm-0' | append: i | append: '.jpg' | asset_url }}" 
+              alt="HomeBy"
+              class="footer-premium__logo"
+            >
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Brand Info -->
+    <div class="footer-premium__section footer-premium__section--info">
+      <h3 class="footer-premium__title">About HomeBy</h3>
+      <p class="footer-premium__description">{{ section.settings.brand_description }}</p>
+      <div class="footer-premium__social">
+        {% if section.settings.facebook != blank %}
+          <a href="{{ section.settings.facebook }}" class="footer-premium__social-link" title="Facebook">
+            <span>f</span>
+          </a>
+        {% endif %}
+        {% if section.settings.instagram != blank %}
+          <a href="{{ section.settings.instagram }}" class="footer-premium__social-link" title="Instagram">
+            <span>@</span>
+          </a>
+        {% endif %}
+        {% if section.settings.twitter != blank %}
+          <a href="{{ section.settings.twitter }}" class="footer-premium__social-link" title="Twitter">
+            <span>𝕏</span>
+          </a>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-premium__section footer-premium__section--links">
+      <h3 class="footer-premium__title">Quick Links</h3>
+      <ul class="footer-premium__links">
+        <li><a href="/collections/all">Shop All</a></li>
+        <li><a href="/pages/about">About Us</a></li>
+        <li><a href="/pages/contact">Contact</a></li>
+        <li><a href="/policies/privacy-policy">Privacy</a></li>
+      </ul>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-premium__section footer-premium__section--newsletter">
+      <h3 class="footer-premium__title">Newsletter</h3>
+      <p class="footer-premium__newsletter-text">Subscribe for exclusive offers</p>
+      <form class="footer-premium__newsletter-form">
+        <input 
+          type="email" 
+          placeholder="Enter your email"
+          class="footer-premium__input"
+          required
+        >
+        <button type="submit" class="footer-premium__button">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="footer-premium__bottom">
+    <div class="footer-premium__copyright">
+      <p>&copy; 2024 HomeBy. All rights reserved.</p>
+    </div>
+    <div class="footer-premium__accent-logo">
+      <img 
+        src="{{ 'logo-md-01.jpg' | asset_url }}" 
+        alt="HomeBy"
+        class="footer-premium__accent"
+      >
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .footer-premium {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 80px 20px 40px;
+  }
+
+  .footer-premium__wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 60px;
+    margin-bottom: 60px;
+  }
+
+  .footer-premium__section {
+    animation: fade-in 0.8s ease-out;
+  }
+
+  .footer-premium__title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 20px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    opacity: 0.9;
+  }
+
+  /* Logos Section */
+  .footer-premium__logos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+  }
+
+  .footer-premium__logo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .footer-premium__logo-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+  }
+
+  .footer-premium__logo {
+    max-width: 100%;
+    height: auto;
+    max-height: 50px;
+  }
+
+  /* Info Section */
+  .footer-premium__description {
+    margin: 0 0 20px;
+    opacity: 0.85;
+    line-height: 1.6;
+    font-size: 0.95rem;
+  }
+
+  .footer-premium__social {
+    display: flex;
+    gap: 15px;
+  }
+
+  .footer-premium__social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 600;
+  }
+
+  .footer-premium__social-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+  }
+
+  /* Links Section */
+  .footer-premium__links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-premium__links li {
+    margin-bottom: 12px;
+  }
+
+  .footer-premium__links a {
+    color: var(--text-color);
+    text-decoration: none;
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
+  }
+
+  .footer-premium__links a:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+
+  /* Newsletter Section */
+  .footer-premium__newsletter-text {
+    opacity: 0.85;
+    margin: 0 0 15px;
+    font-size: 0.95rem;
+  }
+
+  .footer-premium__newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-premium__input {
+    padding: 12px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-color);
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+  }
+
+  .footer-premium__input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .footer-premium__input:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .footer-premium__button {
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    color: var(--text-color);
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .footer-premium__button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+
+  /* Bottom Section */
+  .footer-premium__bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .footer-premium__copyright {
+    opacity: 0.7;
+    font-size: 0.9rem;
+  }
+
+  .footer-premium__copyright p {
+    margin: 0;
+  }
+
+  .footer-premium__accent-logo {
+    max-width: 100px;
+    opacity: 0.3;
+  }
+
+  .footer-premium__accent {
+    width: 100%;
+    height: auto;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .footer-premium {
+      padding: 50px 20px 30px;
+    }
+
+    .footer-premium__wrapper {
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-premium__logos {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer-premium__bottom {
+      justify-content: center;
+      text-align: center;
+    }
+
+    .footer-premium__accent-logo {
+      max-width: 80px;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Premium Footer",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "brand_description",
+      "label": "Brand Description",
+      "default": "HomeBy brings you premium home essentials curated for modern living. Quality, style, and comfort in every product."
+    },
+    {
+      "type": "url",
+      "id": "facebook",
+      "label": "Facebook URL"
+    },
+    {
+      "type": "url",
+      "id": "instagram",
+      "label": "Instagram URL"
+    },
+    {
+      "type": "url",
+      "id": "twitter",
+      "label": "Twitter/X URL"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#2f3133"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#f7f5f2"
+    }
+  ]
+}
+{% endschema %}

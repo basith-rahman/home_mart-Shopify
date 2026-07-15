@@ -9,158 +9,16 @@
  */
 {
   "sections": {
-    "hero_p9CmMG": {
-      "type": "hero",
-      "blocks": {
-        "group_6w9b3Y": {
-          "type": "group",
-          "name": "t:names.group",
-          "settings": {
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "center",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "center",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 16,
-            "width": "fit-content",
-            "custom_width": 70,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "background_media": "none",
-            "background_color": "",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "link": "",
-            "open_in_new_tab": false,
-            "placeholder": "",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "group_9wtdTw": {
-              "type": "group",
-              "name": "t:names.group",
-              "settings": {
-                "content_direction": "column",
-                "vertical_on_mobile": true,
-                "horizontal_alignment": "flex-start",
-                "vertical_alignment": "center",
-                "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "center",
-                "vertical_alignment_flex_direction_column": "center",
-                "gap": 40,
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "custom_height": 100,
-                "background_media": "none",
-                "background_color": "",
-                "video_position": "cover",
-                "background_image_position": "cover",
-                "toggle_overlay": false,
-                "overlay_color": "#00000026",
-                "overlay_style": "solid",
-                "gradient_direction": "to top",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "link": "",
-                "open_in_new_tab": false,
-                "placeholder": "",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {
-                "text_qHY3XF": {
-                  "type": "text",
-                  "name": "t:names.heading",
-                  "settings": {
-                    "text": "<h2>Premium home tools for everyday mastery</h2>",
-                    "width": "100%",
-                    "max_width": "narrow",
-                    "alignment": "center",
-                    "type_preset": "h2",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "text_color": "{{ settings.color_palette.background }}",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 20,
-                    "padding-block-end": 20,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "text_qHY3XF"
-              ]
-            }
-          },
-          "block_order": [
-            "group_9wtdTw"
-          ]
-        }
-      },
-      "block_order": [
-        "group_6w9b3Y"
-      ],
-      "name": "t:names.hero",
+    "hero_brand_premium": {
+      "type": "hero-brand",
       "settings": {
-        "media_type_1": "image",
-        "image_1": "shopify://shop_images/c8d92bc05b973a40623c1519b611050a.png",
-        "media_type_2": "image",
-        "stack_media_on_mobile": false,
-        "custom_mobile_media": false,
-        "media_type_1_mobile": "image",
-        "media_type_2_mobile": "image",
-        "link": "",
-        "open_in_new_tab": false,
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "flex-end",
-        "gap": 0,
-        "section_width": "page-width",
-        "section_height": "small",
-        "section_height_custom": 5,
-        "background_color": "rgba(0,0,0,0)",
-        "toggle_overlay": true,
-        "overlay_color": "#03030314",
-        "overlay_style": "gradient",
-        "gradient_direction": "to top",
-        "blurred_reflection": false,
-        "reflection_opacity": 75,
-        "padding-block-start": 12,
-        "padding-block-end": 40
+        "title": "HomeBy",
+        "subtitle": "Premium Home Essentials Curated for Modern Living",
+        "cta_text": "Shop Now",
+        "cta_link": "/collections/all",
+        "background_color": "#f7f5f2",
+        "text_color": "#2f3133",
+        "padding_block": 80
       }
     },
     "marquee_KN4PYb": {
@@ -604,7 +462,7 @@
         "button_TmU98M": {
           "type": "button",
           "settings": {
-            "label": "Shop now →",
+            "label": "Shop now \u2192",
             "link": "shopify://collections/all",
             "open_in_new_tab": false,
             "style_class": "link",
@@ -872,14 +730,26 @@
         "padding-block-start": 0,
         "padding-block-end": 0
       }
+    },
+    "footer_premium": {
+      "type": "footer-premium",
+      "settings": {
+        "brand_description": "HomeBy brings you premium home essentials curated for modern living. Quality, style, and comfort in every product.",
+        "facebook": "https://facebook.com/homebycollection",
+        "instagram": "https://instagram.com/homebycollection",
+        "twitter": "https://twitter.com/homebycollection",
+        "background_color": "#2f3133",
+        "text_color": "#f7f5f2"
+      }
     }
   },
   "order": [
-    "hero_p9CmMG",
+    "hero_brand_premium",
     "marquee_KN4PYb",
     "product_list_themegen",
     "section_x8mrnx",
     "media_with_content_xMM9EF",
-    "media_with_content_nrnzPh"
+    "media_with_content_nrnzPh",
+    "footer_premium"
   ]
 }
