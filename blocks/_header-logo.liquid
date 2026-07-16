@@ -56,7 +56,7 @@
     data-testid="header-logo"
   >
     <img
-      src="{{ 'headerlogo.png' | asset_url }}"
+      src="{{ 'logo_head.jpg' | asset_url }}"
       alt="{{ shop.name }}"
       class="header-logo__image header-logo__image--3d"
       loading="eager"
@@ -132,11 +132,12 @@
   }
 
   .header-logo__image--3d {
-    max-height: 60px;
-    max-width: 200px;
+    max-height: 48px;
+    max-width: 170px;
     height: auto;
     width: auto;
     object-fit: contain;
+    border-radius: 10px;
     transition: opacity 0.3s ease-out;
   }
   }
